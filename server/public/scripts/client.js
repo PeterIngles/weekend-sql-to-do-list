@@ -103,7 +103,7 @@ function getTasks(){
 <td>${response[i].task}</td>
 <td>${response[i].complete}</td>
 <td>
-     <button class="btn-markComplete">
+     <button class="btn-markComplete" disabled>
    Complete
      </button>
    </td>
