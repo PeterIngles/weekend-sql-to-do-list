@@ -26,3 +26,11 @@ button:hover,
       background: rgb(90, 152, 251);
       color: #fff;
     }
+
+#complete{
+    background-color: green;
+}
+
+#notComplete{
+    background-color: red;
+}

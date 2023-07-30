@@ -58,6 +58,7 @@ tasksRouter.put('/taskcomplete/:id', (req, res) => {
     console.log('in TasksRouter put')
 
     let taskId= req.params.id
+    console.log("Req.params.id is:", req.params.id)
 
     let isReady = 'true' // variable to send to table for updating task complete
     
