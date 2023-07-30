@@ -37,7 +37,7 @@ tasksRouter.post('/', (req, res) => {
 
     let queryText = `
     INSERT INTO "tasks" 
-	("task", "complete");)
+	("task", "complete")
     VALUES ($1, $2); 
     `
 

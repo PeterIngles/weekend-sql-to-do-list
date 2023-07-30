@@ -40,7 +40,7 @@ function deleteTask(){
   // ajax delete request to /tasks/:id
   $.ajax({
     method: 'DELETE',
-    url: `/tasks/deletetasks/${taskId}`
+    url: `/tasks/deletetask/${taskId}`
   })
   .then((response) => {
     // will retrieve latest version of table and rerender to DOM
@@ -55,7 +55,7 @@ function addTask() {
     // using a test object
     let taskToSend = {
       task: $('#taskIn').val(),
-      complete: $('#completeIn').val(),
+      complete: false,
     }
     $.ajax({
       type: 'POST',
@@ -65,7 +65,7 @@ function addTask() {
     $('#taskIn').val(''),
     getTasks();
 });
-    // call saveKoala with the new obejct
+    // call srender with the new obejct
      render( taskToSend );
    }; 
  }
@@ -101,8 +101,9 @@ function getTasks(){
 });
 }
 
-function render( newTask ){
+function render(){
   console.log( 'in render', newTask );
+  getTasks()
   // ajax call to server to get tasks
  
 }
