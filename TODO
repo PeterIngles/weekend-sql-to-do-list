@@ -1,0 +1,31 @@
+# Tasks
+
+[] Client ajax
+    [] Post
+    [] Get
+    [] Put
+    [] Delete
+
+[] Client listener functions
+    [] Add Task button
+    [] Mark complete button
+
+[x] Create css file
+
+[] Update .gitignore file before final commit
+
+[] Server - koala.route.js
+    [] Post
+        [] Connect to client
+        [] Connect to database
+    [] Get
+        [] Connect to client
+        [] Connect to database
+    [] Put
+        [] Connect to client
+        [] Connect to database
+    [] Delete
+        [] Connect to client
+        [] Connect to database
+
+[] Write SQL code to create and populate database tables.

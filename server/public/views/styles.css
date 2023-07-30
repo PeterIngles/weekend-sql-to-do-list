@@ -1,0 +1,28 @@
+body{
+    background-color: pink;
+}
+
+.icon{
+    width: 150px;
+    height: 150px;
+}
+
+header{
+    background-color:rgb(90, 152, 251);
+    border: 5px solid black;
+}
+
+h1,
+h3,
+h2{
+    font-family: Trebuchet MS, sans-serif;
+    font-weight: 300;
+    font-style:italic
+}
+
+button:hover,
+    button:focus {
+      outline: none;
+      background: rgb(90, 152, 251);
+      color: #fff;
+    }
