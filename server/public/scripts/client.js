@@ -7,7 +7,7 @@ $( document ).ready( function(){
   $('#viewTasks').on('click', '.btn-markComplete', taskComplete)
 
   $('#viewTasks').on('click', '.btn-delete', deleteTask)
-  // load existing koalas on page load
+  // load existing tasks on page load
   render()
 
 }); // end doc ready
