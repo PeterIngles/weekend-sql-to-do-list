@@ -5,6 +5,7 @@ $( document ).ready( function(){
   // Establish Click Listeners
   $('#addButton').on('click', addTask)
   $('#viewTasks').on('click', '.btn-markComplete', taskComplete)
+
   $('#viewTasks').on('click', '.btn-delete', deleteTask)
   // load existing koalas on page load
   render()
@@ -84,14 +85,14 @@ function getTasks(){
 <td>${response[i].task}</td>
 <td>${response[i].complete}</td>
 <td>
-     <button class="btn-markComplete">
+     <button class="btn btn-outline-primary btn-markComplete">
    Complete
      </button>
    </td>
    <td>
-     <button class="btn-delete">
-      Delete
-     </button>
+     <button type="button" class="btn btn-outline-danger btn-delete" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  DELETE?
+</button>
        </td>
     </tr>
     `)
@@ -103,14 +104,14 @@ function getTasks(){
 <td>${response[i].task}</td>
 <td>${response[i].complete}</td>
 <td>
-     <button class="btn-markComplete" disabled>
+     <button class="btn btn-outline-primary btn-markComplete" disabled>
    Complete
      </button>
    </td>
    <td>
-     <button class="btn-delete">
-      Delete
-     </button>
+   <button type="button" class="btn btn-outline-danger btn-delete" data-bs-toggle="modal" data-bs-target="#exampleModal">
+   DELETE?
+ </button>
        </td>
     </tr>
     `)
@@ -124,3 +125,27 @@ function getTasks(){
 function render(){
   getTasks()
 }
+
+// Never got this modal to work 😢
+// function modal(){
+//   let newRow = $(`
+//   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+//   <div class="modal-dialog">
+//     <div class="modal-content">
+//       <div class="modal-header">
+//         <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+//         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+//       </div>
+//       <div class="modal-body">
+//         ...
+//       </div>
+//       <div class="modal-footer">
+//         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+//         <button type="button" class="btn btn-primary">Save changes</button>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//   `)
+//   $('#viewTasks').append(newRow)
+// }
